@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b0d2f8d-f955-4d40-b784-3d290a87db91" name="Default Changelist" comment="" />
+    <list default="true" id="4b0d2f8d-f955-4d40-b784-3d290a87db91" name="Default Changelist" comment="init(projet)PPE" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +30,12 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -142,6 +148,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -155,8 +162,16 @@
       <option name="presentableId" value="Default" />
       <updated>1606473491995</updated>
       <workItem from="1606473494151" duration="522000" />
-      <workItem from="1606474237622" duration="746000" />
+      <workItem from="1606474237622" duration="1286000" />
     </task>
+    <task id="LOCAL-00001" summary="init(projet)PPE">
+      <created>1606475723866</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606475723866</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,10 +188,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init(projet)PPE" />
+    <option name="LAST_COMMIT_MESSAGE" value="init(projet)PPE" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1606474835370">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2" timestamp="1606475733719">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="427" y="228" key="Vcs.Push.Dialog.v2/-1440.69.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1606475733719" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1606474835370" />
   </component>
 </project>
