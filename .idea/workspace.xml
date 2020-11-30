@@ -27,7 +27,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -54,7 +54,12 @@
       <option name="presentableId" value="Default" />
       <updated>1605273960701</updated>
       <workItem from="1605273963911" duration="10000" />
+<<<<<<< Updated upstream
       <workItem from="1606767350409" duration="1279000" />
+=======
+      <workItem from="1606767350409" duration="49000" />
+      <workItem from="1606768037395" duration="354000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
