@@ -710,6 +710,6 @@ class __TwigTemplate_957b94e4b09e9a236eca1916b012ed5528a6fcbe3d76e27b816262169c1
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/mailer.html.twig", "/Users/daniellevy/my_project_name2/vendor/symfony/web-profiler-bundle/Resources/views/Collector/mailer.html.twig");
+", "@WebProfiler/Collector/mailer.html.twig", "/Users/daniellevy/my_project_name/vendor/symfony/web-profiler-bundle/Resources/views/Collector/mailer.html.twig");
     }
 }

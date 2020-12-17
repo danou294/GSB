@@ -898,6 +898,6 @@ class __TwigTemplate_0b567fa1e46b79cabaab1ae8ceca11c96a3e521f2946b11099c40bcd78e
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/translation.html.twig", "/Users/daniellevy/my_project_name2/vendor/symfony/web-profiler-bundle/Resources/views/Collector/translation.html.twig");
+", "@WebProfiler/Collector/translation.html.twig", "/Users/daniellevy/my_project_name/vendor/symfony/web-profiler-bundle/Resources/views/Collector/translation.html.twig");
     }
 }

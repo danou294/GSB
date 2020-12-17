@@ -173,6 +173,6 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/Users/daniellevy/my_project_name2/templates/base.html.twig");
+", "base.html.twig", "/Users/daniellevy/my_project_name/templates/base.html.twig");
     }
 }
