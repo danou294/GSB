@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Monotype Corsiva';
+    src: url('../fonts/monotype-corsiva.ttf');
+}
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-sherif;
+}
+
+
+/*
+attribut du menu
+ */
+.menu{
+
+    height: 100%;
+    align-items: center;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+.navbar-l{
+    margin-left: 70px;
+    font-size: 2em;
+}
+
+.navbar-bordure{
+    border: solid 1px white;
+    border-radius: 40px;
+    padding: 20px 40px;
+}
+
+.navbar-bordure:hover{
+    background-color: white;
+    color: #0F8D7F;
+
+}
+
+.navbar-titre {
+    margin-right: auto;
+    font-family: "Monotype Corsiva", serif;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+nav{
+    height: 112px;
+    background-color: #0F8D7F;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2{
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.soulign{
+
+    color: #0F8D7F;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: solid 2px #0F8D7F ;
+}
+
+
+

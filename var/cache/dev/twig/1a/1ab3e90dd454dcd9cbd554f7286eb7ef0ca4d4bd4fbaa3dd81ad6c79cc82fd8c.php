@@ -65,7 +65,7 @@ class __TwigTemplate_edc033996e27e103b7ca3234ae16b865b2f01476624feb250caf879f366
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "tout nos biens";
+        echo "Accueil GSB";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -86,9 +86,10 @@ class __TwigTemplate_edc033996e27e103b7ca3234ae16b865b2f01476624feb250caf879f366
 
         // line 5
         echo "
-    <div class=\"'jumbotron text-center\">
-        <h1> Voir tout nos biens</h1>
-        <p>page de test</p>
+    <br class=\"'jumbotron text-center\">
+        <h1><span class=\"soulign \">Nos Médicaments </span></h1></br>
+
+        <h2><span class=\"soulign \">Médicaments non conseillé</span></h2>
 
     </div>
 ";
@@ -119,12 +120,13 @@ class __TwigTemplate_edc033996e27e103b7ca3234ae16b865b2f01476624feb250caf879f366
     {
         return new Source("{% extends './base.html.twig' %}
 
-{%  block title 'tout nos biens' %}
+{%  block title 'Accueil GSB' %}
 {% block body %}
 
-    <div class=\"'jumbotron text-center\">
-        <h1> Voir tout nos biens</h1>
-        <p>page de test</p>
+    <br class=\"'jumbotron text-center\">
+        <h1><span class=\"soulign \">Nos Médicaments </span></h1></br>
+
+        <h2><span class=\"soulign \">Médicaments non conseillé</span></h2>
 
     </div>
 {% endblock %}", "pages/home.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/templates/pages/home.html.twig");

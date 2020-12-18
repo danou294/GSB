@@ -45,49 +45,54 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
 
         // line 1
         echo "<!DOCTYPE html>
-<html>
+
 <head>
+    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+    <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
     <meta charset=\"UTF-8\">
     <title>";
-        // line 5
+        // line 7
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\">
-    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx\" crossorigin=\"anonymous\"></script>
-    ";
+    <link rel=\"stylesheet\" href=";
         // line 8
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/style_daniel.css"), "html", null, true);
+        echo "
+
+    ";
+        // line 10
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 9
+        // line 11
         echo "</head>
 <body>
-<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-    <a class=\"navbar-brand\" href=\"";
-        // line 12
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\">Mon Agence</a>
-    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-        <span class=\"navbar-toggler-icon\"></span>
-    </button>
+<!-- contenu principale de la page menu-titre etc.. -->
 
-    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-        <ul class=\"navbar-nav mr-auto\">
-            <li class=\"nav-item active\">
-                <a class=\"nav-link\" href=\"\">Mes biens <span class=\"sr-only\">(current)</span></a>
-            </li>
-        </ul>
-    </div>
+<header>
+<nav>
+    <ul class=\"menu\">
+        <li class=\"navbar-titre\"><a  href=\"#\" >gsb</a></li>
+        <li class=\"navbar-l\"><a href=\"#\" >Prescription</a></li>
+        <li class=\"navbar-l\"><a href=\"#\" >Client</a></li>
+        <li class=\"navbar-l\"><a class=\"navbar-bordure\" href=\"#\" >Nos Médicaments</a></li>
+
+    </ul>
 </nav>
-";
-        // line 25
-        $this->displayBlock('body', $context, $blocks);
-        // line 26
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 27
-        echo "<script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>
+</header>
+<!-- structure principale de la page -->
+<main>
 
-</body>
+</main>
+
+<footer>
+
+</footer>
+";
+        // line 34
+        $this->displayBlock('body', $context, $blocks);
+        // line 35
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 36
+        echo "</body>
 </html>
 ";
         
@@ -98,7 +103,7 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
 
     }
 
-    // line 5
+    // line 7
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -108,7 +113,7 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Mon Agence!";
+        echo "<u>Nos Medicaments</u>";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -117,7 +122,7 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
 
     }
 
-    // line 8
+    // line 10
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -135,7 +140,7 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
 
     }
 
-    // line 25
+    // line 34
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -153,7 +158,7 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
 
     }
 
-    // line 26
+    // line 35
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -183,41 +188,46 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
 
     public function getDebugInfo()
     {
-        return array (  157 => 26,  139 => 25,  121 => 8,  102 => 5,  86 => 27,  84 => 26,  82 => 25,  66 => 12,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  162 => 35,  144 => 34,  126 => 10,  107 => 7,  95 => 36,  93 => 35,  91 => 34,  66 => 11,  64 => 10,  59 => 8,  55 => 7,  47 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
-<html>
+
 <head>
+    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+    <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
     <meta charset=\"UTF-8\">
-    <title>{% block title %}Mon Agence!{% endblock %}</title>
-    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\">
-    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx\" crossorigin=\"anonymous\"></script>
+    <title>{% block title %}<u>Nos Medicaments</u>{% endblock %}</title>
+    <link rel=\"stylesheet\" href={{ asset('assets/css/style_daniel.css') }}
+
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-    <a class=\"navbar-brand\" href=\"{{ path('home') }}\">Mon Agence</a>
-    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-        <span class=\"navbar-toggler-icon\"></span>
-    </button>
+<!-- contenu principale de la page menu-titre etc.. -->
 
-    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-        <ul class=\"navbar-nav mr-auto\">
-            <li class=\"nav-item active\">
-                <a class=\"nav-link\" href=\"\">Mes biens <span class=\"sr-only\">(current)</span></a>
-            </li>
-        </ul>
-    </div>
+<header>
+<nav>
+    <ul class=\"menu\">
+        <li class=\"navbar-titre\"><a  href=\"#\" >gsb</a></li>
+        <li class=\"navbar-l\"><a href=\"#\" >Prescription</a></li>
+        <li class=\"navbar-l\"><a href=\"#\" >Client</a></li>
+        <li class=\"navbar-l\"><a class=\"navbar-bordure\" href=\"#\" >Nos Médicaments</a></li>
+
+    </ul>
 </nav>
+</header>
+<!-- structure principale de la page -->
+<main>
+
+</main>
+
+<footer>
+
+</footer>
 {% block body %}{% endblock %}
 {% block javascripts %}{% endblock %}
-<script src=\"https://code.jquery.com/jquery-3.5.1.slim.min.js\" integrity=\"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js\" integrity=\"sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s\" crossorigin=\"anonymous\"></script>
-
 </body>
 </html>
 ", "./base.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/templates/base.html.twig");
