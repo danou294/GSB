@@ -227,6 +227,6 @@ class __TwigTemplate_fbfa84791e83299adf74545876229c909609c20cda1d8d32248465f0fbd
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "/Users/daniellevy/my_project_name/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
     }
 }

@@ -471,6 +471,6 @@ class __TwigTemplate_c34178799eeb883846d8bd9a6a85a2cc6386a2c98a69638593a45ada14b
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "/Users/daniellevy/my_project_name/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
     }
 }

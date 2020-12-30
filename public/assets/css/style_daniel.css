@@ -14,6 +14,7 @@ body{
 }
 
 
+
 /*
 attribut du menu
  */
@@ -35,18 +36,6 @@ attribut du menu
     font-size: 2em;
 }
 
-.navbar-bordure{
-    border: solid 1px white;
-    border-radius: 40px;
-    padding: 20px 40px;
-}
-
-.navbar-bordure:hover{
-    background-color: white;
-    color: #0F8D7F;
-
-}
-
 .navbar-titre {
     margin-right: auto;
     font-family: "Monotype Corsiva", serif;
@@ -56,11 +45,12 @@ attribut du menu
 
 nav{
     height: 112px;
-    background-color: #0F8D7F;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 6px 0 rgba(0, 0, 0, 0.13);
 }
 nav a {
     text-decoration: none;
-    color: white;
+    color: #003f82;
 }
 
 h1, h2{
@@ -68,13 +58,70 @@ h1, h2{
     text-align: center;
 }
 
-.soulign{
+.soulign {
+    color: #003f82;
+}
 
-    color: #0F8D7F;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-bottom: solid 2px #0F8D7F ;
+.soulign::after{
+    margin: auto;
+    display: block;
+    position: relative;
+    content: " ";
+    height: 5px;
+    width: 20vw;
+    background: linear-gradient(to right, #00b7ed 36%, #003f82 84%);
+}
+
+h1 .soulign::after{
+    width: 30%;
+}
+
+/* Button menu */
+
+.li-spe{
+    background: #01b4e9;
+    border: solid 1px white;
+    border-radius: 40px;
+    position: relative;
+}
+
+.navbar-bordure{
+    padding: 20px 40px;
+    color: white;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.navbar-bordure:after {
+    width: 0%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left,#003f82,#00b7ed 55%);
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbar-bordure:hover,
+.navbar-bordure:active {
+    color: white;
+}
+
+.navbar-bordure:hover:after,
+.navbar-bordure:active:after{
+    width: 100%;
 }
 
 
 
+/*
+linear-gradient(to left,#003f82,#00b7ed 55%)
+ */

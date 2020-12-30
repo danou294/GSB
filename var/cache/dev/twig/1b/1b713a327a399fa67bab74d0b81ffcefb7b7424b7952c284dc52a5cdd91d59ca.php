@@ -479,6 +479,6 @@ class __TwigTemplate_f5261fb49bf54c432996bd8e3b0fc87ffa5433656a5d9ac61755de2b481
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/validator.html.twig", "/Users/daniellevy/my_project_name/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
+", "@WebProfiler/Collector/validator.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
     }
 }

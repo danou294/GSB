@@ -1349,6 +1349,6 @@ class __TwigTemplate_e50e90df21f6c1c6f12d39fedff598a28f0e49cfe4598b70393474ccbf0
         <span>{{ route|default(controller) }}</span>
     {%- endif %}
 {% endmacro %}
-", "@WebProfiler/Collector/request.html.twig", "/Users/daniellevy/my_project_name/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
+", "@WebProfiler/Collector/request.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
     }
 }

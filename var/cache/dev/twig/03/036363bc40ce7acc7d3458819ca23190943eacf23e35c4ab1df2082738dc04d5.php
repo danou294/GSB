@@ -413,6 +413,6 @@ class __TwigTemplate_40419eef2f11eb6988013c6ef32fc056fbd9f5629351f97d99e2a53a372
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/Users/daniellevy/my_project_name/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

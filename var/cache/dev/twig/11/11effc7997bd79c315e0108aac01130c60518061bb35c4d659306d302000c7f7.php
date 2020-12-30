@@ -155,6 +155,6 @@ class __TwigTemplate_0e3fd9ef0843e258a5428a02e0a3376ec6b4a18bd8cf5c6f9e85ccda9c8
 {% block panel %}
     {{ render(path('_profiler_router', { token: token })) }}
 {% endblock %}
-", "@WebProfiler/Collector/router.html.twig", "/Users/daniellevy/my_project_name/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
+", "@WebProfiler/Collector/router.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
     }
 }

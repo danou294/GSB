@@ -86,10 +86,9 @@ class __TwigTemplate_edc033996e27e103b7ca3234ae16b865b2f01476624feb250caf879f366
 
         // line 5
         echo "
-    <br class=\"'jumbotron text-center\">
-        <h1><span class=\"soulign \">Nos Médicaments </span></h1></br>
+    <h1><div><span class=\"soulign\">Nos Médicaments </span></div></h1>
 
-        <h2><span class=\"soulign \">Médicaments non conseillé</span></h2>
+        <h2><span class=\"soulign\">Médicaments non conseillé</span></h2>
 
     </div>
 ";
@@ -123,10 +122,9 @@ class __TwigTemplate_edc033996e27e103b7ca3234ae16b865b2f01476624feb250caf879f366
 {%  block title 'Accueil GSB' %}
 {% block body %}
 
-    <br class=\"'jumbotron text-center\">
-        <h1><span class=\"soulign \">Nos Médicaments </span></h1></br>
+    <h1><div><span class=\"soulign\">Nos Médicaments </span></div></h1>
 
-        <h2><span class=\"soulign \">Médicaments non conseillé</span></h2>
+        <h2><span class=\"soulign\">Médicaments non conseillé</span></h2>
 
     </div>
 {% endblock %}", "pages/home.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/templates/pages/home.html.twig");

@@ -482,6 +482,6 @@ class __TwigTemplate_7d8a6f9be713b05d432b29a4ceb18dbe6272d30857b521ca065b8bda420
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "/Users/daniellevy/my_project_name/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "/Users/daniellevy/PhpstormProjects/bts-alt-g2-2021/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
     }
 }

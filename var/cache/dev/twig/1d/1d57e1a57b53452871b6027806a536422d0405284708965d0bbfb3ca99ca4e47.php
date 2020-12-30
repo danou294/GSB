@@ -73,7 +73,7 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
         <li class=\"navbar-titre\"><a  href=\"#\" >gsb</a></li>
         <li class=\"navbar-l\"><a href=\"#\" >Prescription</a></li>
         <li class=\"navbar-l\"><a href=\"#\" >Client</a></li>
-        <li class=\"navbar-l\"><a class=\"navbar-bordure\" href=\"#\" >Nos Médicaments</a></li>
+        <li class=\"li-spe navbar-l\"><a class=\"navbar-bordure\" href=\"#\" >Nos Médicaments</a></li>
 
     </ul>
 </nav>
@@ -213,7 +213,7 @@ class __TwigTemplate_654033f97bee63545cb4e48a7e0d859e2f106fd4b4cb070e1c38c503c2b
         <li class=\"navbar-titre\"><a  href=\"#\" >gsb</a></li>
         <li class=\"navbar-l\"><a href=\"#\" >Prescription</a></li>
         <li class=\"navbar-l\"><a href=\"#\" >Client</a></li>
-        <li class=\"navbar-l\"><a class=\"navbar-bordure\" href=\"#\" >Nos Médicaments</a></li>
+        <li class=\"li-spe navbar-l\"><a class=\"navbar-bordure\" href=\"#\" >Nos Médicaments</a></li>
 
     </ul>
 </nav>
