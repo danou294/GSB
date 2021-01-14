@@ -644,6 +644,6 @@ class __TwigTemplate_8c8b82027f98037c2325f2067acf8313ee95185f8c4400a6a7d95f08aa4
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/notifier.html.twig", "C:\\Users\\RIVKA\\bst-alt-g2-2021\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\notifier.html.twig");
+", "@WebProfiler/Collector/notifier.html.twig", "C:\\Users\\Daniel\\Documents\\GitHub\\bts-alt-g2-2021\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\notifier.html.twig");
     }
 }

@@ -900,6 +900,6 @@ class __TwigTemplate_f00dd0ed237a16e9050e49188ce4142d9e7739cdb972a776d190fb05005
         {% endautoescape %}</script>
     </div>
 {% endmacro %}
-", "@WebProfiler/Collector/time.html.twig", "C:\\Users\\RIVKA\\bst-alt-g2-2021\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\time.html.twig");
+", "@WebProfiler/Collector/time.html.twig", "C:\\Users\\Daniel\\Documents\\GitHub\\bts-alt-g2-2021\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\time.html.twig");
     }
 }

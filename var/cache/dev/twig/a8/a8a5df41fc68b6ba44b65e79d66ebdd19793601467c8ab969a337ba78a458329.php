@@ -2080,6 +2080,6 @@ class __TwigTemplate_9a54eb89ee1d5be8d7c2673d16056534dd80e39f5a4672b897035f9e5a0
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "C:\\Users\\RIVKA\\bst-alt-g2-2021\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\form.html.twig");
+", "@WebProfiler/Collector/form.html.twig", "C:\\Users\\Daniel\\Documents\\GitHub\\bts-alt-g2-2021\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\form.html.twig");
     }
 }

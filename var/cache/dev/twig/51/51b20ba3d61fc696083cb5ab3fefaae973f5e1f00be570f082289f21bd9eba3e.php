@@ -898,6 +898,6 @@ class __TwigTemplate_0783925c9145a9393380fc340001038fed1f4f050d759a94d7150479dd1
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/translation.html.twig", "C:\\Users\\RIVKA\\bst-alt-g2-2021\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
+", "@WebProfiler/Collector/translation.html.twig", "C:\\Users\\Daniel\\Documents\\GitHub\\bts-alt-g2-2021\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
     }
 }

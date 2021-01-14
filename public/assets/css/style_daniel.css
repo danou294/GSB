@@ -78,14 +78,19 @@ h1 .soulign::after{
 
 /* Button menu */
 
-.li-spe{
+.a-spe{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 0;
     background: #01b4e9;
     border: solid 1px white;
     border-radius: 40px;
-    position: relative;
+    overflow: hidden;
 }
 
 .navbar-bordure{
+    display: block;
     padding: 20px 40px;
     color: white;
     outline: none;
@@ -93,10 +98,11 @@ h1 .soulign::after{
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    width: 100%;
+    z-index: 2;
 }
 
 .navbar-bordure:after {
+    z-index: -1;
     width: 0%;
     height: 100%;
     top: 0;
@@ -104,7 +110,6 @@ h1 .soulign::after{
     background: linear-gradient(to left,#003f82,#00b7ed 55%);
     content: '';
     position: absolute;
-    z-index: -1;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;

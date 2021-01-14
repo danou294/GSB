@@ -127,6 +127,6 @@ class __TwigTemplate_e0bc8839c75cacb1bd66f46a358418417b1255e167ba5ff4a827c939d2d
         <h2><span class=\"soulign\">Médicaments non conseillé</span></h2>
 
     </div>
-{% endblock %}", "pages/home.html.twig", "C:\\Users\\RIVKA\\bst-alt-g2-2021\\templates\\pages\\home.html.twig");
+{% endblock %}", "pages/home.html.twig", "C:\\Users\\Daniel\\Documents\\GitHub\\bts-alt-g2-2021\\templates\\pages\\home.html.twig");
     }
 }
