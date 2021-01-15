@@ -13,8 +13,7 @@ class A
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
-     */
+     * @qd
     private $id;
 
     public function getId(): ?int
