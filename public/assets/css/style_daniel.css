@@ -107,7 +107,7 @@ h1 .soulign::after{
     height: 100%;
     top: 0;
     right: 0;
-    background: linear-gradient(to left,#003f82,#00b7ed 55%);
+    background: linear-gradient(to left,#003f82,#00b7ed 70%);
     content: '';
     position: absolute;
     -webkit-transition: all 0.3s;
