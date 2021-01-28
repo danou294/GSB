@@ -8,13 +8,12 @@
 
 <main>
     {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <div class="label">
-        {{ form_label(form.medNomcommercial) }}
-    </div>
-    <button>Ajouter</button>
-    {{ form_end(form) }}
+    <label class="label">
+        {{ form_label(form.medNomcommercial, 'Nom Commercial') }}
+        {{ form_(form.medNomcommercial) }}
+    </label>
 
+    {{ form_end(form) }}
 
 
 

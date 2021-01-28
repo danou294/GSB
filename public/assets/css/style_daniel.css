@@ -135,6 +135,6 @@ input{
     border: solid 1px #707070;
 }
 
-btn btn-success{
+.label{
     color: red;
 }
