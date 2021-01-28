@@ -1,0 +1,23 @@
+{% extends './base.html.twig' %}
+
+{%  block title 'Accueil GSB' %}
+{% block body %}
+<header>
+<h1 class="left"><span class="soulign">Ajouter un Medicament </span></h1>
+</header>
+
+<main>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="label">
+        {{ form_label(form.medNomcommercial) }}
+    </div>
+    <button>Ajouter</button>
+    {{ form_end(form) }}
+
+
+
+
+</main>
+</div>
+{% endblock %}

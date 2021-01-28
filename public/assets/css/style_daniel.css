@@ -74,6 +74,7 @@ h1, h2{
 
 h1 .soulign::after{
     width: 30%;
+    color: #003f82;
 }
 
 /* Button menu */
@@ -127,6 +128,13 @@ h1 .soulign::after{
 
 
 
-/*
-linear-gradient(to left,#003f82,#00b7ed 55%)
- */
+input{
+    padding: 10px 10px;
+    margin: 82px 300px 17.5px 54px;
+    border-radius: 20px;
+    border: solid 1px #707070;
+}
+
+btn btn-success{
+    color: red;
+}
