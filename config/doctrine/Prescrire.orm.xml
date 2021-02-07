@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="App\Entity\Prescrire" table="prescrire">
+    <indexes>
+      <index name="dos_code" columns="dos_code"/>
+      <index name="tin_code" columns="tin_code"/>
+    </indexes>
+    <id name="medDepotlegal" type="integer" column="med_depotlegal"/>
+    <id name="tinCode" type="integer" column="tin_code"/>
+    <id name="dosCode" type="integer" column="dos_code"/>
+    <field name="prePosologie" type="string" column="pre_posologie" length="40" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

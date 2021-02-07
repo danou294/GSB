@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="App\Entity\Medicament" table="medicament">
+    <indexes>
+      <index name="fam_code" columns="fam_code"/>
+    </indexes>
+    <id name="idMedicament" type="integer" column="id_medicament">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="medDepotlegal" type="integer" column="med_depotlegal" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="medNomcommercial" type="string" column="med_nomcommercial" length="25" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="medComposition" type="string" column="med_composition" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="medEffets" type="string" column="med_effets" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="medContreindic" type="string" column="med_contreindic" length="255" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="medPrixechantillon" type="float" column="med_prixechantillon" precision="10" scale="0" nullable="false"/>
+    <field name="famCode" type="integer" column="fam_code" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>

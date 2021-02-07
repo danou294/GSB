@@ -15,11 +15,24 @@ class HomeController extends AbstractController
 
 
 
-    public function Formulaire():Response
+    public function Formulaire($request):Response
     {
-                // creates a task object and initializes some data for this example
+        $token = $request->request->get('_csrf_token');
+        if ($request->isMethod('POST') && $this->isCsrfTokenValid('addMedoc', $token)) {
                 $medicament = new Medicament();
-                $form = $this->createForm(MedicamentType::class);
-                return $this->render('pages/AjoutMedicament.html.twig', ['form' => $form->createView(),]);
+            $medicament->set($request->request->get('nom'));
+            $medicament->setNom($request->request->get('nom'));
+            $medicament->setNom($request->request->get('nom'));
+            $medicament->setNom($request->request->get('nom'));
+            $medicament->setNom($request->request->get('nom'));
+            $medicament->setNom($request->request->get('nom'));
+            $medicament->setNom($request->request->get('nom'));
+            // ORM
         }
+
+        return $this->render('medicament/index.html.twig', [
+            'controller_name' => 'MedicamentController',
+        ]);
+    }
+
 }

@@ -3,20 +3,35 @@
 {%  block title 'Accueil GSB' %}
 {% block body %}
 <header>
-<h1 class="left"><span class="soulign">Ajouter un Medicament </span></h1>
+<h1 align="left" class="left"><span class="soulign">Ajouter un Medicament </span></h1>
 </header>
 
-<main>
-    {{ form_start(form) }}
-    <label class="label">
-        {{ form_label(form.medNomcommercial, 'Nom Commercial') }}
-        {{ form_(form.medNomcommercial) }}
-    </label>
+    <form method="post">
 
-    {{ form_end(form) }}
+        <label>Dépot légal</label>
+        <input name="Depot_legal" type="text">
 
+        <label>Nom commercial</label>
+        <input name="nom_commercial" type="text">
 
+        <label>Prix</label>
+        <input name="prix" type="number">
 
-</main>
+        <label>Composition</label>
+        <input name="composition" type="text">
+
+        <label>Médicament non conseillé</label>
+        <input name="mnc" type="text">
+
+        <label>Image</label>
+        <input name="Image" type="file">
+
+        <label>Effets</label>
+        <input name="effey" type="text">
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('addMedoc') }}"/>
+
+    </form>
+
 </div>
 {% endblock %}
