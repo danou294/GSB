@@ -13,9 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
 class Dosage
 {
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="dos_code", type="string", length=10, nullable=false)
+     * @ORM\Column(name="dos_code", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
@@ -35,7 +35,7 @@ class Dosage
      */
     private $dosUnite;
 
-    public function getDosCode(): ?string
+    public function getDosCode(): ?int
     {
         return $this->dosCode;
     }

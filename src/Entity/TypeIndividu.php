@@ -13,9 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
 class TypeIndividu
 {
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="tin_code", type="string", length=5, nullable=false)
+     * @ORM\Column(name="tin_code", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
@@ -28,7 +28,7 @@ class TypeIndividu
      */
     private $tinLibelle;
 
-    public function getTinCode(): ?string
+    public function getTinCode(): ?int
     {
         return $this->tinCode;
     }

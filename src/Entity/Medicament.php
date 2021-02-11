@@ -13,11 +13,18 @@ use Doctrine\ORM\Mapping as ORM;
 class Medicament
 {
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="med_depotlegal", type="string", length=10, nullable=false)
+     * @ORM\Column(name="id_medicament", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idMedicament;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="med_depotlegal", type="integer", nullable=false)
      */
     private $medDepotlegal;
 
@@ -27,13 +34,6 @@ class Medicament
      * @ORM\Column(name="med_nomcommercial", type="string", length=25, nullable=false)
      */
     private $medNomcommercial;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="fam_code", type="string", length=3, nullable=false)
-     */
-    private $famCode;
 
     /**
      * @var string
@@ -63,9 +63,28 @@ class Medicament
      */
     private $medPrixechantillon;
 
-    public function getMedDepotlegal(): ?string
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="fam_code", type="integer", nullable=false)
+     */
+    private $famCode;
+
+    public function getIdMedicament(): ?int
+    {
+        return $this->idMedicament;
+    }
+
+    public function getMedDepotlegal(): ?int
     {
         return $this->medDepotlegal;
+    }
+
+    public function setMedDepotlegal(int $medDepotlegal): self
+    {
+        $this->medDepotlegal = $medDepotlegal;
+
+        return $this;
     }
 
     public function getMedNomcommercial(): ?string
@@ -76,18 +95,6 @@ class Medicament
     public function setMedNomcommercial(string $medNomcommercial): self
     {
         $this->medNomcommercial = $medNomcommercial;
-
-        return $this;
-    }
-
-    public function getFamCode(): ?string
-    {
-        return $this->famCode;
-    }
-
-    public function setFamCode(string $famCode): self
-    {
-        $this->famCode = $famCode;
 
         return $this;
     }
@@ -136,6 +143,18 @@ class Medicament
     public function setMedPrixechantillon(float $medPrixechantillon): self
     {
         $this->medPrixechantillon = $medPrixechantillon;
+
+        return $this;
+    }
+
+    public function getFamCode(): ?int
+    {
+        return $this->famCode;
+    }
+
+    public function setFamCode(int $famCode): self
+    {
+        $this->famCode = $famCode;
 
         return $this;
     }

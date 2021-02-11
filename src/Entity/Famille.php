@@ -13,9 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
 class Famille
 {
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="fam_code", type="string", length=3, nullable=false)
+     * @ORM\Column(name="fam_code", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
@@ -28,7 +28,7 @@ class Famille
      */
     private $famLibelle;
 
-    public function getFamCode(): ?string
+    public function getFamCode(): ?int
     {
         return $this->famCode;
     }

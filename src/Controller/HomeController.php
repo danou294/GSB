@@ -3,11 +3,12 @@
 
 namespace App\Controller;
 
-
 use App\Entity\Medicament;
-use App\Form\MedicamentType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use App\Form\MedicamentType;
 use Twig\Environment;
 
 class HomeController extends AbstractController
@@ -15,22 +16,22 @@ class HomeController extends AbstractController
 
 
 
-    public function Formulaire($request):Response
+    public function Formulaire(Request $request):Response
     {
         $token = $request->request->get('_csrf_token');
         if ($request->isMethod('POST') && $this->isCsrfTokenValid('addMedoc', $token)) {
                 $medicament = new Medicament();
-            $medicament->set($request->request->get('nom'));
-            $medicament->setNom($request->request->get('nom'));
-            $medicament->setNom($request->request->get('nom'));
-            $medicament->setNom($request->request->get('nom'));
-            $medicament->setNom($request->request->get('nom'));
-            $medicament->setNom($request->request->get('nom'));
-            $medicament->setNom($request->request->get('nom'));
+            $medicament->setMedDepotlegal($request->request->get('Depot_legal'));
+            $medicament->setMedNomcommercial($request->request->get('nom_commercial'));
+            $medicament->setMedPrixechantillon($request->request->get('prix'));
+            $medicament->setMedComposition($request->request->get('composition'));
+            $medicament->setMedContreindic($request->request->get('mnc'));
+            $medicament->setMedEffets($request->request->get('effet'));
+            dd($medicament);
             // ORM
         }
 
-        return $this->render('medicament/index.html.twig', [
+        return $this->render('pages/AjoutMedicament.html.twig', [
             'controller_name' => 'MedicamentController',
         ]);
     }

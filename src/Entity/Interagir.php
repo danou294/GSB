@@ -13,29 +13,29 @@ use Doctrine\ORM\Mapping as ORM;
 class Interagir
 {
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="med_perturbateur", type="string", length=10, nullable=false)
+     * @ORM\Column(name="med_perturbateur", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      */
     private $medPerturbateur;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="med_med_perturbe", type="string", length=10, nullable=false)
+     * @ORM\Column(name="med_med_perturbe", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      */
     private $medMedPerturbe;
 
-    public function getMedPerturbateur(): ?string
+    public function getMedPerturbateur(): ?int
     {
         return $this->medPerturbateur;
     }
 
-    public function getMedMedPerturbe(): ?string
+    public function getMedMedPerturbe(): ?int
     {
         return $this->medMedPerturbe;
     }

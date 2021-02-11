@@ -13,25 +13,29 @@ use Doctrine\ORM\Mapping as ORM;
 class Prescrire
 {
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="med_depotlegal", type="string", length=10, nullable=false)
+     * @ORM\Column(name="med_depotlegal", type="integer", nullable=false, options={"unsigned"=true})
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="NONE")
      */
     private $medDepotlegal;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="tin_code", type="string", length=5, nullable=false)
+     * @ORM\Column(name="tin_code", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
      */
     private $tinCode;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="dos_code", type="string", length=10, nullable=false)
+     * @ORM\Column(name="dos_code", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
      */
     private $dosCode;
 
@@ -42,33 +46,19 @@ class Prescrire
      */
     private $prePosologie;
 
-    public function getMedDepotlegal(): ?string
+    public function getMedDepotlegal(): ?int
     {
         return $this->medDepotlegal;
     }
 
-    public function getTinCode(): ?string
+    public function getTinCode(): ?int
     {
         return $this->tinCode;
     }
 
-    public function setTinCode(string $tinCode): self
-    {
-        $this->tinCode = $tinCode;
-
-        return $this;
-    }
-
-    public function getDosCode(): ?string
+    public function getDosCode(): ?int
     {
         return $this->dosCode;
-    }
-
-    public function setDosCode(string $dosCode): self
-    {
-        $this->dosCode = $dosCode;
-
-        return $this;
     }
 
     public function getPrePosologie(): ?string
