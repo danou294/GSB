@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <title>{% block title %}<u>Nos Medicaments</u>{% endblock %}</title>
     <link rel="stylesheet" href={{ asset('assets/css/style_daniel.css') }}
+    <link rel="stylesheet" href={{ asset('assets/css/style_tuani.css') }}
+    <link rel="stylesheet" href={{ asset('assets/css/style_john.css') }}
 
     {% block stylesheets %}{% endblock %}
 </head>
@@ -16,7 +18,7 @@
 <nav>
     <ul class="menu">
         <li class="navbar-titre"><a  href="#" >gsb</a></li>
-        <li class="navbar-l"><a href="#" >Prescription</a></li>
+        <li class="navbar-l"><a href="/controller/prescription" >Prescription</a></li>
         <li class="navbar-l"><a href="#" >Client</a></li>
         <li class="li-spe navbar-l"><a class="a-spe" href="#" ><span class="navbar-bordure" >Nos Médicaments</span></a></li>
 
