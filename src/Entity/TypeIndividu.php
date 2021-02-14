@@ -3,12 +3,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ClientRepository;
+
 
 /**
  * TypeIndividu
  *
  * @ORM\Table(name="type_individu")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass= ClientRepository::class)
  */
 class TypeIndividu
 {
