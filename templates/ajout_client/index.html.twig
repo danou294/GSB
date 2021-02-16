@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AjoutClientController!{% endblock %}
+{% block body %}
+
+    <header>
+        <h1 align="left" class="left"><span class="soulign">Ajouter un Type d'individu </span></h1>
+    </header>
+    <form action="{{ path('ajout_client') }}" method="post">
+
+
+        <label>Type d'individu</label>
+        <input name="type_individu" type="text"/>
+
+        <button type="submit" name="button" value="insert"  style="width:130px"></button>
+    </form>
+
+{% endblock %}

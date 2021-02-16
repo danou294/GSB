@@ -30,6 +30,7 @@ class TypeIndividu
      */
     private $tinLibelle;
 
+
     public function getTinCode(): ?int
     {
         return $this->tinCode;
@@ -46,6 +47,8 @@ class TypeIndividu
 
         return $this;
     }
+
+
 
 
 }

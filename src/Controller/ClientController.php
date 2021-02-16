@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Entity\TypeIndividu;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
-use http\Client;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -29,4 +28,5 @@ class ClientController extends AbstractController
             'controller_name' => $controller_name
         ]);
     }
+
 }
