@@ -6,3 +6,33 @@
     padding: 0 0 0.5px;
     border: solid 1px #003f82;
 }
+.soulign {
+    color: #003f82;
+}
+
+table
+{
+    margin:auto;
+    border-collapse: collapse; /* bordures du tableau collées (c plus joli) */
+    width: 933px;
+    height: 561px;
+    padding: 0 0 0.5px;
+    border: solid 2px #003f82;
+}
+
+tr:nth-child(even) {
+    background-color: Lightgrey;
+}
+
+td,th
+{
+    border: solid 2px #003f82;
+}
+th{
+    color: #DDDDDD;
+  background-color:#003f82;
+
+}
+
+
+}
