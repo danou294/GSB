@@ -2,9 +2,9 @@
 
 {%  block title 'Accueil GSB' %}
 {% block body %}
-<header>
+<head>
 <h1 align="left" class="left"><span class="soulign">Ajouter un Medicament </span></h1>
-</header>
+</head>
 
     <form method="post">
 
@@ -27,9 +27,14 @@
         <input name="Image" type="file">
 
         <label>Effets</label>
-        <input name="effey" type="text">
+        <input name="effet" type="text">
+
+        <label>Code Famille</label>
+        <input name="codefamille" type="text">
 
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('addMedoc') }}"/>
+
+        <input type="submit">
 
     </form>
 

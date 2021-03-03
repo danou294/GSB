@@ -12,6 +12,25 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Medicament
 {
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $brochureFilename;
+
+    public function getBrochureFilename()
+    {
+        return $this->brochureFilename;
+    }
+
+    public function setBrochureFilename($brochureFilename)
+    {
+        $this->brochureFilename = $brochureFilename;
+
+        return $this;
+    }
+
+
     /**
      * @var int
      *
@@ -20,6 +39,8 @@ class Medicament
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idMedicament;
+
+
 
     /**
      * @var int
@@ -52,7 +73,7 @@ class Medicament
     /**
      * @var string
      *
-     * @ORM\Column(name="med_contreindic", type="string", length=255, nullable=false)
+     * @ORM\Column(name="med_contreindic", type="string", length=255, nullable=true)
      */
     private $medContreindic;
 

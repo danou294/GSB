@@ -23,8 +23,6 @@ class AjoutClientController extends AbstractController
      * @param Request $request
      * @return Response
      */
-
-
     public function Formulaire(Request $request): Response
     {
         $type_individu= new TypeIndividu();
