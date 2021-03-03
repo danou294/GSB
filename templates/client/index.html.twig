@@ -3,20 +3,43 @@
 {% block title %}Individus{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <style>
+        .example-wrapper {
+            margin: 1em auto;
+            max-width: 800px;
+            width: 95%;
+            font: 18px/1.5 sans-serif;
+        }
 
-<div class="example-wrapper">
-    <h1>Types d'individus</h1>
+        .example-wrapper code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+        }
+    </style>
 
-    {% for TypeIndividu in controller_name %}
-    <div class="row">
-        <div class="col-6 col-sm-3"></div>
-        <h4>{{ TypeIndividu.tinLibelle}}</h4>
+    <div class="example-wrapper">
+        <h1>Types d'individus</h1>
+        <div class="tableau">
+            <div class="row">
+                <a href="{{ path('ajout_client') }}">
+                    <button type="submit" name="button" value="insert" class="btn-ajouter">Ajouter</button>
+                </a>
+                <a href="{{ path('ajout_client') }}">
+                    <button type="submit" name="button" value="insert" class="btn-modifier">Modifier</button>
+                </a>
 
+            </div>
+            <div>
+                <ul class="liste-individus">
+                    {% for TypeIndividu in controller_name %}
+                        <li class="row individus">
+
+                            <span>{{ TypeIndividu.tinLibelle }}</span>
+
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
-    {% endfor %}
-</div>
 {% endblock %}

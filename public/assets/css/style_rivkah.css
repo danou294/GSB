@@ -1,0 +1,25 @@
+.tableau{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+.btn-ajouter, .btn-modifier{
+    padding: 10px 20px;
+    background-color: #01b4e9;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.individus{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.liste-individus{
+    margin: 0;
+}
+.tableau a{
+    display: block;
+    margin-bottom: 10px;
+}
