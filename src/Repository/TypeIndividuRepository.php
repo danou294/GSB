@@ -12,29 +12,28 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method A[]    findAll()
  * @method A[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ClientRepository extends ServiceEntityRepository
+class TypeIndividuRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, TypeIndividu::class);
     }
 
-    // /**
-    //  * @return A[] Returns an array of A objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @return TypeIndividu[] Returns an array of A objects
+     */
+    public function findByTinLibelle($tinLibelle)
     {
         return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
+            ->andWhere('a.tinLibelle = :lib')
+            ->setParameter('lib', $tinLibelle)
+            ->orderBy('tin_libelle', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+
 
     /*
     public function findOneBySomeField($value): ?A
