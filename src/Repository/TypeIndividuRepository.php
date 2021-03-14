@@ -22,7 +22,7 @@ class TypeIndividuRepository extends ServiceEntityRepository
     /**
      * @return TypeIndividu[] Returns an array of A objects
      */
-    public function findByTinLibelle($tinLibelle)
+    public function findByTinLibelle($tinLibelle): array
     {
         return $this->createQueryBuilder('a')
             ->andWhere('a.tinLibelle = :lib')

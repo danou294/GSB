@@ -3,14 +3,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use App\Repository\ClientRepository;
+use App\Repository\TypeIndividuRepository;
 
 
 /**
  * TypeIndividu
  *
  * @ORM\Table(name="type_individu")
- * @ORM\Entity(repositoryClass= ClientRepository::class)
+ * @ORM\Entity(repositoryClass= TypeIndividuRepository::class)
  */
 class TypeIndividu
 {
@@ -47,6 +47,7 @@ class TypeIndividu
 
         return $this;
     }
+
 
 
 
