@@ -2,33 +2,43 @@
 
 namespace App\Entity;
 
-use App\Repository\TestRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=TestRepository::class)
+ * Test
+ *
+ * @ORM\Table(name="test")
+ * @ORM\Entity
  */
 class Test
 {
     /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string|null
+     *
+     * @ORM\Column(name="test1", type="string", length=255, nullable=true)
      */
     private $test1;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(name="test2", type="string", length=255, nullable=false)
      */
     private $test2;
 
     /**
-     * @ORM\Column(type="decimal", precision=10, scale=0)
+     * @var string
+     *
+     * @ORM\Column(name="test3", type="decimal", precision=10, scale=0, nullable=false)
      */
     private $test3;
 
@@ -72,4 +82,6 @@ class Test
 
         return $this;
     }
+
+
 }
