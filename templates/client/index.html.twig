@@ -24,9 +24,7 @@
                 <a href="{{ path('ajout_client') }}">
                     <button type="submit" name="button" value="insert" class="btn-ajouter">Ajouter</button>
                 </a>
-                <a href="{{ path('ajout_client') }}">
-                    <button type="submit" name="button" value="insert" class="btn-modifier">Modifier</button>
-                </a>
+
 
             </div>
             <div>
@@ -35,6 +33,9 @@
                         <li class="row individus">
 
                             <span>{{ TypeIndividu.tinLibelle }}</span>
+                            <a href="{{ path('client') }}">
+                                <button type="submit" name="button" value="insert" class="btn-modifier">Supprimer</button>
+                            </a>
 
                         </li>
                     {% endfor %}

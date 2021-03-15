@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Individus{% endblock %}
+
+{% block body %}
+
+    <table class="table table-hover">
+        <caption>Liste des individus</caption>
+        <thead>
+        <tr>
+
+            <th scope="col">Type d'indivu</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for TypeIndividu in controller_name %}
+        <tr>
+
+            <td> <span>{{ TypeIndividu.tinLibelle }}</span></td>
+            <td> <a href="{{ path('typeindividu') }}">
+                    <button type="submit" name="button" value="insert" class="btn-ajouter">Ajouter</button>
+                </a>
+             <a href="{{ path('typeindividu') }}">
+                    <button type="submit" name="button" value="insert" class="btn-modifier">Supprimer</button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
