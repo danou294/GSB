@@ -9,15 +9,14 @@
             </tr>
             </thead>
             <tbody>
-            {%for
-                medDepotlegal in Medicament  %}
+            {% for Medicament in Medicament  %}
                 <tr>
                     <td>{{Medicament.medDepotlegal}}</td>
-                    <td>
-                        <a href="{{ path('modifspecialite', {id: spe.speCode}) }}"><button type="button" class="btn btn-primary">Modifier</button></a>
-                        <a href="{{ path('supprimerspecialite', {id: spe.speCode}) }}" style="display:
+                    <!--<td>
+                        <a href=" path('modifspecialite', {id: spe.speCode}) }}"><button type="button" class="btn btn-primary">Modifier</button></a>
+                        <a href=" path('supprimerspecialite', {id: spe.speCode}) }}" style="display:
                         inline-block"><button type="button" class="btn btn-primary">Supprimer</button></a>
-                    </td>
+                    </td> -->
                 </tr>
             {% endfor %}
             </tbody>
