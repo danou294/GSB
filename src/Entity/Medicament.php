@@ -21,8 +21,6 @@ class Medicament
      */
     private $medDepotlegal;
 
-
-
     /**
      * @var string
      *
