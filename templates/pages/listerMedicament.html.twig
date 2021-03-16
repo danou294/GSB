@@ -1,25 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="container mt-5">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Medicament</th>
-            </tr>
-            </thead>
-            <tbody>
+<div class="liste">
             {% for Medicament in Medicament  %}
-                <tr>
-                    <td>{{Medicament.medDepotlegal}}</td>
-                    <!--<td>
-                        <a href=" path('modifspecialite', {id: spe.speCode}) }}"><button type="button" class="btn btn-primary">Modifier</button></a>
-                        <a href=" path('supprimerspecialite', {id: spe.speCode}) }}" style="display:
-                        inline-block"><button type="button" class="btn btn-primary">Supprimer</button></a>
-                    </td> -->
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+    <div class="medicament">
+        <div>{{Medicament.medNomcommercial}}</div>
+        <div>{{Medicament.medDepotlegal}}</div>
+        <div>{{Medicament.medPrixechantillon}}</div>
     </div>
+
+            {% endfor %}
+</div>
 {% endblock %}
