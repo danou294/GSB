@@ -15,18 +15,13 @@ class Medicament
     /**
      * @var int
      *
-     * @ORM\Column(name="id_medicament", type="integer", nullable=false)
+     * @ORM\Column(name="med_depotlegal", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idMedicament;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="med_depotlegal", type="integer", nullable=false)
-     */
     private $medDepotlegal;
+
+
 
     /**
      * @var string
@@ -70,10 +65,7 @@ class Medicament
      */
     private $famCode;
 
-    public function getIdMedicament(): ?int
-    {
-        return $this->idMedicament;
-    }
+
 
     public function getMedDepotlegal(): ?int
     {

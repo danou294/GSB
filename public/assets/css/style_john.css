@@ -35,4 +35,16 @@ th{
 }
 
 
+.bouton a {
+    display:block;
+    width:150px;
+    line-height:50px;
+    text-align:center;
+    vertical-align:middle;
+    background:blue no-repeat;
+    color:white;
+    text-decoration:none;
+}
+.bouton a:hover {
+    background:blueviolet no-repeat;
 }
