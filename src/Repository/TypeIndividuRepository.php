@@ -22,12 +22,10 @@ class TypeIndividuRepository extends ServiceEntityRepository
     /**
      * @return TypeIndividu[] Returns an array of A objects
      */
-    public function findByTinLibelle($tinLibelle): array
+    public function findByTinLibelle(): array
     {
         return $this->createQueryBuilder('a')
-            ->andWhere('a.tinLibelle = :lib')
-            ->setParameter('lib', $tinLibelle)
-            ->orderBy('tin_libelle', 'ASC')
+            ->orderBy('a.tinLibelle', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()

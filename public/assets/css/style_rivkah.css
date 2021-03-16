@@ -9,7 +9,7 @@ caption{
 .span {
 
 }
-.btn-ajouter, .btn-modifier{
+#type_individu_save, .btn-ajouter, .btn-modifier{
     padding: 10px 20px;
     background-color: #01b4e9;
     color: white;
@@ -18,3 +18,4 @@ caption{
     border-radius: 20px;
     cursor: pointer;
 }
+
