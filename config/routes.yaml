@@ -4,4 +4,4 @@
 
 home:
   path: /
-  controller: App\Controller\HomeController::Formulaire
+  controller: App\Controller\HomeController::index

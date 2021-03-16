@@ -45,9 +45,9 @@ class Medicament
     private $medEffets;
 
     /**
-     * @var string
+     * @var string|null
      *
-     * @ORM\Column(name="med_contreindic", type="string", length=255, nullable=false)
+     * @ORM\Column(name="med_contreindic", type="string", length=255, nullable=true)
      */
     private $medContreindic;
 
@@ -120,7 +120,7 @@ class Medicament
         return $this->medContreindic;
     }
 
-    public function setMedContreindic(string $medContreindic): self
+    public function setMedContreindic(?string $medContreindic): self
     {
         $this->medContreindic = $medContreindic;
 

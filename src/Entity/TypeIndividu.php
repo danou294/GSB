@@ -3,14 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use App\Repository\ClientRepository;
-
 
 /**
  * TypeIndividu
  *
  * @ORM\Table(name="type_individu")
- * @ORM\Entity(repositoryClass= ClientRepository::class)
+ * @ORM\Entity
  */
 class TypeIndividu
 {
@@ -30,7 +28,6 @@ class TypeIndividu
      */
     private $tinLibelle;
 
-
     public function getTinCode(): ?int
     {
         return $this->tinCode;
@@ -47,8 +44,6 @@ class TypeIndividu
 
         return $this;
     }
-
-
 
 
 }

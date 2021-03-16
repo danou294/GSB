@@ -1,7 +1,13 @@
-.tableau{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
+caption{
+    padding: 10px 20px;
+    background-color: #01b4e9;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 70px;
+    font-family: "HoloLens MDL2 Assets", sans-serif;
+}
+.span {
+
 }
 .btn-ajouter, .btn-modifier{
     padding: 10px 20px;
@@ -11,15 +17,4 @@
     border: none;
     border-radius: 20px;
     cursor: pointer;
-}
-.individus{
-    text-transform: capitalize;
-    margin-bottom: 10px;
-}
-.liste-individus{
-    margin: 0;
-}
-.tableau a{
-    display: block;
-    margin-bottom: 10px;
 }
