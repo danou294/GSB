@@ -17,34 +17,10 @@ use Twig\Environment;
 class HomeController extends AbstractController
 {
 
-    public function Ajout(Request $request):Response
-    {
-        $token = $request->request->get('_csrf_token');
-        if ($request->isMethod('POST') && $this->isCsrfTokenValid('addMedoc', $token)) {
-            $medicament = new Medicament();
-            $medicament->setMedDepotlegal($request->request->get('Depot_legal'));
-            $medicament->setMedNomcommercial($request->request->get('nom_commercial'));
-            $medicament->setMedPrixechantillon($request->request->get('prix'));
-            $medicament->setMedComposition($request->request->get('composition'));
-            $medicament->setMedContreindic($request->request->get('mnc'));
-            $medicament->setMedEffets($request->request->get('effet'));
-            $medicament->setFamCode($request->request->get('codefamille'));
-            // ORM
-            $em = $this->getDoctrine()->getManager();
-        $em->persist($medicament);
-        $em->flush();
-        }
-
-
-        return $this->render('pages/AjoutMedicament.html.twig', [
-            'controller_name' => 'MedicamentController',
-        ]);
-    }
-
     public function index(MedicamentRepository $repoMedicament):Response
     {
         $reponse = $repoMedicament->findAll();
-        return $this->render('pages/listerMedicament.html.twig', ['Medicament' => $reponse]);
+        return $this->render('pages/home.html.twig', ['Medicament' => $reponse]);
         }
 
 }

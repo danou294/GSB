@@ -4,8 +4,17 @@
 {% block body %}
 
     <h1><div><span class="soulign">Nos Médicaments </span></div></h1>
-
-        <h2><span class="soulign">Médicaments non conseillé</span></h2>
-
+    <div class="liste">
+        {% for Medicament in Medicament  %}
+        <div class="medicament">
+            <div>{{Medicament.medNomcommercial}}</div>
+            <div>{{Medicament.medDepotlegal}}</div>
+            <div>{{Medicament.medPrixechantillon}}</div>
+        </div>
     </div>
+        {% endfor %}
+    <h2><span class="soulign">Médicaments non conseillé</span></h2>
+    <a href="/ajoutMedicament">ajouteeeeerrr</a>
+    </div>
+
 {% endblock %}
