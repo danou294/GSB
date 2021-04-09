@@ -18,10 +18,11 @@
         {% for TypeIndividu in types %}
         <tr>
 
+
             <td> <span>{{ TypeIndividu.tinLibelle }}</span></td>
             <td> <a href="{{ path('typeindividu') }}">
-                    <button type="submit" name="button" value="insert" class="btn-ajouter">Ajouter</button>
-                </a>
+                    <button type="submit" name="button" value="insert" class="btn-ajouter" ><a href="/ajout/type" </a>Ajouter</button>
+
              <a href="{{ path('typeindividu') }}">
                     <button type="submit" name="button" value="insert" class="btn-modifier">Supprimer</button>
                 </a>

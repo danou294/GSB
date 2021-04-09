@@ -14,7 +14,7 @@ class TypeIndividuType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('tinLibelle', TextType::class )
+            ->add('tinLibelle', TextType::class,['label'=>'Nom'] )
             ->add('save',SubmitType::class,['label'=>'Créer un type'])
         ;
     }
