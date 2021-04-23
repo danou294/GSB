@@ -1,20 +1,47 @@
 {% extends './base.html.twig' %}
 
-{%  block title 'Accueil GSB' %}
+{%  block title 'Prescription' %}
 {% block body %}
-
+<head>
     <h1><div><span class="soulign">Prescription</span></div></h1>
+</head>
+<div class="container">
+    <form name="prescrire" method="post">
 
-    <label for="medoc-select">Choose a drug : </label>
+        <label>Sélectionnez un médicament : </label>
+            <select name="medoc">
+                <option value="">-- Please choose an option --</option>
+                <option value="Cod">Codéine</option>
+                <option value="Para">Paracétamole</option>
+                <option value="Morph">Morphine</option>
+                <option value="Cort">Cortisol</option>
+            </select>
+            <br><br>
+            <textarea name="msg-medoc" typeof="text" rows="6" cols="40">Vous pouvez saisir ici</textarea>
 
-    <select name="medoc" id="medoc-select">
-        <option value="">-- Please choose an option --</option>
-        <option value="Cod">Codéine</option>
-        <option value="Para">Paracétamole</option>
-        <option value="Morph">Morphine</option>
-        <option value="Cort">Cortisol</option>
-    </select>
+        <br><br>
 
+            <label>Sélectionner un individu :</label>
+            <select name="ind">
 
-    </div>
+            </select>
+            <br><br>
+            <textarea name="msg-ind" typeof="text" rows="6" cols="40">Vous pouvez saisir ici</textarea>
+
+        <br><br>
+
+            <label>Sélectionner un dosage :</label>
+            <select name="ind">
+                <option value="">-- Please choose an option --</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <br>
+            <textarea name="msg-dos" typeof="text" rows="6" cols="40">Vous pouvez saisir ici</textarea>
+            <input type="submit" value="Envoyer" />
+            <input type="reset" value="Annuler" />
+    </form>
+</div>
 {% endblock %}

@@ -1,7 +1,11 @@
-select{
+.select{
     font-family: 'Roboto', sans-serif;
 }
 
-option{
-    border-radius: 10px;
+.option{
+    border-radius: 15px;
+}
+
+{
+    margin-left: 50px;
 }
