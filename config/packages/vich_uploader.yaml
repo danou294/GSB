@@ -1,7 +1,11 @@
-vich_uploader:
-    db_driver: orm
+# config / packages / vich_uploader.yaml ou app / config / config.yml
+vich_uploader :
+  db_driver : orm
 
-    mappings:
-        images:
-            uri_prefix: /assets/images/medicament
-            upload_destination: '%kernel.project_dir%/public/assets/images/medicament'
+  mappings :
+    product_image :
+      uri_prefix : / uploads / images / medicaments /
+      upload_destination : ' % kernel.project_dir% / public / uploads / images / medicaments / '
+
+
+

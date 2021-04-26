@@ -3,7 +3,8 @@
 {% block body %}
 <div class="liste">
             {% for Medicament in Medicament  %}
-    <div class="medicament">
+    <div class="medicament">*
+        <img src="{{ asset('assets/image/image.svg') }}">
         <div>{{Medicament.medNomcommercial}}</div>
         <div>{{Medicament.medDepotlegal}}</div>
         <div>{{Medicament.medPrixechantillon}}</div>

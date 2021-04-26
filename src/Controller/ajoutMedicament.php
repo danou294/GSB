@@ -14,6 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Form\MedicamentType;
 use Twig\Environment;
 
+
 class ajoutMedicament extends AbstractController
 {
     /**
@@ -31,17 +32,9 @@ class ajoutMedicament extends AbstractController
             $medicament->setMedContreindic($request->request->get('mnc'));
             $medicament->setMedEffets($request->request->get('effet'));
             $medicament->setFamCode($request->request->get('codefamille'));
-
-
-            if (isset($request->files->all()["fichier"])){
-                $file_name =$_FILES["fichier"]["name"];
-                $file_name_tmp =$_FILES["fichier"]["tmp_name"];
-                $file_dest ='/public/assets/image/'.$file_name;
-                dump($file_name_tmp);
-                dump($file_dest);
-
-                dump(move_uploaded_file($file_name_tmp, $file_dest));
-            }
+            $medicament->setImage('asterix');
+            $medicament->setImageFile($request->files->get('fichier'));
+            echo $medicament->getImageFile();
 
             // ORM
             $em = $this->getDoctrine()->getManager();

@@ -3,12 +3,18 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Entity\File as EmbeddedFile;
+
 
 /**
  * Medicament
  *
  * @ORM\Table(name="medicament", indexes={@ORM\Index(name="fam_code", columns={"fam_code"})})
  * @ORM\Entity
+ * @Vich\Uploadable
  */
 class Medicament
 {
@@ -69,6 +75,19 @@ class Medicament
      * @ORM\Column(name="fam_code", type="integer", nullable=false)
      */
     private $famCode;
+
+    /**
+    * @ORM\Column(type="string", length=255)
+    * @var string
+     */
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="product_image", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
 
     public function getIdMedicament(): ?int
     {
@@ -159,5 +178,28 @@ class Medicament
         return $this;
     }
 
+    /**
+    *
+    *@param File | UploadedFile | null $ imageFile
+    */
+    public function setImageFile(? File  $imageFile = null )
+    {
+        $this->imageFile = $imageFile;
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
 
 }
