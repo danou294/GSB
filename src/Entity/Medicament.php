@@ -3,18 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Vich\UploaderBundle\Entity\File as EmbeddedFile;
-
 
 /**
  * Medicament
  *
  * @ORM\Table(name="medicament", indexes={@ORM\Index(name="fam_code", columns={"fam_code"})})
  * @ORM\Entity
- * @Vich\Uploadable
  */
 class Medicament
 {
@@ -25,7 +19,7 @@ class Medicament
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $medDepotlegal;
+    private $meddepotlegal;
 
     /**
      * @var string
@@ -70,21 +64,15 @@ class Medicament
     private $famCode;
 
     /**
-    * @ORM\Column(type="string", length=255)
-    * @var string
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255, nullable=false)
      */
     private $image;
 
-    /**
-     * @Vich\UploadableField(mapping="product_image", fileNameProperty="image")
-     * @var File
-     */
-    private $imageFile;
-
-
-    public function getMedDepotlegal(): ?int
+    public function getMeddepotlegal(): ?int
     {
-        return $this->medDepotlegal;
+        return $this->meddepotlegal;
     }
 
     public function getMedNomcommercial(): ?string
@@ -159,28 +147,17 @@ class Medicament
         return $this;
     }
 
-    /**
-    *
-    *@param File | UploadedFile | null $ imageFile
-    */
-    public function setImageFile(? File  $imageFile = null )
-    {
-        $this->imageFile = $imageFile;
-    }
-
-    public function getImageFile()
-    {
-        return $this->imageFile;
-    }
-
-    public function setImage($image)
-    {
-        $this->image = $image;
-    }
-
-    public function getImage()
+    public function getImage(): ?string
     {
         return $this->image;
     }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
 
 }

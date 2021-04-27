@@ -33,6 +33,10 @@
 
         <input type="submit">
 
+
+        {% for Medicament in Medicament  %}
+            <input type="checkbox" name="contreIndic[]" value="{{ Medicament.medDepotlegal }}">{{ Medicament.medNomcommercial }}
+        {% endfor %}
     </form>
 
 </div>

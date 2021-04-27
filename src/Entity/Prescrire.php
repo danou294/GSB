@@ -7,15 +7,17 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Prescrire
  *
- * @ORM\Table(name="prescrire", indexes={@ORM\Index(name="dos_code", columns={"dos_code"}), @ORM\Index(name="tin_code", columns={"tin_code"})})
+ * @ORM\Table(name="prescrire")
  * @ORM\Entity
  */
 class Prescrire
 {
     /**
      * @var int
-     * @ORM\Id
+     *
      * @ORM\Column(name="med_depotlegal", type="integer", nullable=false, options={"unsigned"=true})
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $medDepotlegal;
 
@@ -50,9 +52,23 @@ class Prescrire
         return $this->tinCode;
     }
 
+    public function setTinCode(int $tinCode): self
+    {
+        $this->tinCode = $tinCode;
+
+        return $this;
+    }
+
     public function getDosCode(): ?int
     {
         return $this->dosCode;
+    }
+
+    public function setDosCode(int $dosCode): self
+    {
+        $this->dosCode = $dosCode;
+
+        return $this;
     }
 
     public function getPrePosologie(): ?string
@@ -63,27 +79,6 @@ class Prescrire
     public function setPrePosologie(string $prePosologie): self
     {
         $this->prePosologie = $prePosologie;
-
-        return $this;
-    }
-
-    public function setMedDepotlegal(int $medDepotlegal): self
-    {
-        $this->medDepotlegal = $medDepotlegal;
-
-        return $this;
-    }
-
-    public function setTinCode(int $tinCode): self
-    {
-        $this->tinCode = $tinCode;
-
-        return $this;
-    }
-
-    public function setDosCode(int $dosCode): self
-    {
-        $this->dosCode = $dosCode;
 
         return $this;
     }

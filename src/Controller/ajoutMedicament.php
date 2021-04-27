@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use ContainerCDEsyw9\getDoctrine_Orm_DefaultEntityManager_PropertyInfoExtractorService;
 use App\Entity\Medicament;
+use App\Entity\ContreIndic;
 use App\Repository\MedicamentRepository;
 use ContainerCDEsyw9\getDoctrine_CacheClearMetadataCommandService;
 use Doctrine\Persistence\ObjectManager;
@@ -31,31 +32,43 @@ class ajoutMedicament extends AbstractController
     /**
      * @Route("/ajoutMedicament", name="ajout_medicament")
      */
-    public function Ajout(Request $request):Response
+    public function Ajout(Request $request, MedicamentRepository $medicamentRepository):Response
     {
         $token = $request->request->get('_csrf_token');
+        $medicament = $medicamentRepository->findAll();
         if ($request->isMethod('POST') && $this->isCsrfTokenValid('addMedoc', $token)) {
             $medicament = new Medicament();
             $medicament->setMedNomcommercial($request->request->get('nom_commercial'));
             $medicament->setMedPrixechantillon($request->request->get('prix'));
             $medicament->setMedComposition($request->request->get('composition'));
-            $medicament->setMedContreindic($request->request->get('mnc'));
+
             $medicament->setMedEffets($request->request->get('effet'));
             $medicament->setFamCode($request->request->get('codefamille'));
             $medicament->setImage('asterix');
-            $medicament->setImageFile($request->files->get('fichier'));
-            echo $medicament->getImageFile();
 
             // ORM
             $em = $this->getDoctrine()->getManager();
             $em->persist($medicament);
             $em->flush();
             return $this->redirectToRoute('home');
+
+            $contreIndic = $request->request->get('contreIndic[]');
+            var_dump($contreIndic);
+            foreach ($contreIndic as $value)
+            {
+                $medoc = new ContreIndic();
+                $medoc->setIdcontreindic();
+
+                $em->persist($medoc);
+                $em->flush();
+                $medicament->setMedContreindic($request->request->get('mnc'));
+            }
+
         }
 
 
         return $this->render('pages/AjoutMedicament.html.twig', [
-            'controller_name' => 'MedicamentController',
+            'Medicament' => $medicament,
         ]);
     }
 
