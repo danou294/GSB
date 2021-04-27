@@ -50,6 +50,7 @@ class ajoutMedicament extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($medicament);
             $em->flush();
+            return $this->redirectToRoute('home');
         }
 
 

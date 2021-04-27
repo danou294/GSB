@@ -1,0 +1,21 @@
+{% extends './base.html.twig' %}
+
+{%  block title 'Accueil GSB' %}
+{% block body %}
+    <head>
+        <h1 align="left" class="left"><span class="soulign">Modifier l'individu </span></h1>
+    </head>
+    {{ form_start(form) }}
+
+    <label>{{ form_row(form.tinLibelle) }}</label>
+
+
+
+    {{ form_widget(form) }}
+    <button>Editer</button>
+    {{ form_end(form) }}
+
+    </form>
+
+    </div>
+{% endblock %}

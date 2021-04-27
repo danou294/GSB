@@ -1,4 +1,7 @@
+/*
+
 .Rectangle-19
+
 {
     width: 933px;
     height: 561px;
@@ -13,7 +16,7 @@
 table
 {
     margin:auto;
-    border-collapse: collapse; /* bordures du tableau collées (c plus joli) */
+    border-collapse: collapse; /* bordures du tableau collées (c plus joli)
     width: 933px;
     height: 561px;
     padding: 0 0 0.5px;
@@ -48,3 +51,4 @@ th{
 .bouton a:hover {
     background:blueviolet no-repeat;
 }
+*/

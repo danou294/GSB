@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Medicament;
 use App\Entity\TypeIndividu;
+use App\Form\MedicamentType;
 use App\Form\TypeIndividuType;
 use App\Repository\TypeIndividuRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -74,7 +76,7 @@ class TypeindividuController extends AbstractController
             $type_individu= $form->getNormData();
             $em->persist($type_individu);
             $em->flush();
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('typeindividu');
         }
 
 
@@ -84,6 +86,27 @@ class TypeindividuController extends AbstractController
         ]);
     }
 
+    /**
+     * @route("adminindiv/{id}", name="admin.individu.edit")
+     * @param TypeIndividu $individu
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     */
+    public function edit(TypeIndividu $individu, Request $request)
+    {
+        $form = $this->createForm(TypeIndividuType::class, $individu);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid() ){
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+            return $this->redirectToRoute('typeindividu');
+        }
+
+
+        return $this->render('/modifier_individu/index.html.twig',[
+            'Individu' =>  $individu,
+            'form' => $form->createView()
+        ]);
+    }
 
 }
 
