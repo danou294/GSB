@@ -30,5 +30,14 @@
 
     </form>
 
+    <h1><div><span class="soulign">Médicaments non conseillé </span></div></h1>
+    <div class="liste">
+        {% for Liste in Liste  %}
+            <div class="medicament">
+                <img src="{{ asset('assets/image/image.svg') }}">
+                <div>{{Liste.libellemed}}</div>
+            </div>
+        {% endfor %}
+    </div>
     </div>
 {% endblock %}

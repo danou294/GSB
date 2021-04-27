@@ -2,22 +2,22 @@
 
 namespace App\Repository;
 
-use App\Entity\ContreIndic;
+use App\Entity\Famille;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method ContreIndic|null find($id, $lockMode = null, $lockVersion = null)
- * @method ContreIndic|null findOneBy(array $criteria, array $orderBy = null)
- * @method ContreIndic[]    findAll()
- * @method ContreIndic[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Famille|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Famille|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Famille[]    findAll()
+ * @method Famille[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 
-class ContreIndicRepository extends ServiceEntityRepository
+class FamilleRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ContreIndic::class);
+        parent::__construct($registry, Famille::class);
     }
 
     // /**
@@ -31,9 +31,8 @@ class ContreIndicRepository extends ServiceEntityRepository
     public function findById($id)
     {
         return $this->createQueryBuilder('id')
-            ->andWhere('id.idMedicament = :val')
+            ->andWhere('id.idlist = :val')
             ->setParameter('val', $id)
-            ->setMaxResults()
             ->getQuery()
             ->getResult()
         ;

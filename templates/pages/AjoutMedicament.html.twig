@@ -2,40 +2,44 @@
 
 {%  block title 'Accueil GSB' %}
 {% block body %}
-<head>
+<head xmlns="http://www.w3.org/1999/html">
 <h1 align="left" class="left"><span class="soulign">Ajouter un Medicament </span></h1>
 </head>
 
     <form method="post" action="{{ path('ajout_medicament') }}">
 
         <label>Nom commercial</label>
-        <input name="nom_commercial" type="text" placeholder="">
+        <input class="form-control" name="nom_commercial" type="text" placeholder="">
 
         <label>Prix</label>
-        <input name="prix" type="number">
+        <input class="form-control" name="prix" type="number">
 
-        <label>Composition</label>
-        <input name="composition" type="text">
+        <label>Famille</label>
+        <select name="codefamille">
+            <option value="">--choose value--</option>
+            {% for famille in famille  %}
+                <option value="{{ famille.famCode }}">{{ famille.famLibelle }}</option>
+            {% endfor %}
+        </select><br>
 
-        <label>Médicament non conseillé</label>
-        <input name="mnc" type="text">
+
 
         <label>Image</label>
-        <input type="file" multiple="multiple" name="fichier"  />
+        <input class="form-control" type="file" multiple="multiple" name="fichier"  />
 
         <label>Effets</label>
-        <input name="effet" type="text">
+        <input class="form-control" name="effet" type="text">
 
-        <label>Code Famille</label>
-        <input name="codefamille" type="text">
+        <label>Composition</label>
+        <input class="form-control" name="composition" type="text">
 
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('addMedoc') }}"/>
 
-        <input type="submit">
+        <button class="btn btn-primary" type="submit">Button</button>
 
 
         {% for Medicament in Medicament  %}
-            <input type="checkbox" name="contreIndic[]" value="{{ Medicament.medDepotlegal }}">{{ Medicament.medNomcommercial }}
+            <input type="checkbox" name="contreIndic[]" value="{{ Medicament.medNomcommercial }}">{{ Medicament.medNomcommercial }}
         {% endfor %}
     </form>
 
