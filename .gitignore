@@ -17,3 +17,4 @@
 /.idea/
 .env
 /var
+templates/pages/AjoutMedicament.html.twig
