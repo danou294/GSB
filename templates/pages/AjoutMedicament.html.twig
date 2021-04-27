@@ -34,7 +34,7 @@
         <input class="form-control" name="composition" type="text"><br>
 
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('addMedoc') }}"/>
-
+<h4>Medicaments deconseille pour ce medicament</h4>
 
         {% for Medicament in Medicament  %}
             <input class="form-check-input" id="{{ Medicament.meddepotlegal }}" type="checkbox" name="contreIndic[]" value="{{ Medicament.medNomcommercial }}"><label for="{{ Medicament.meddepotlegal }}" class="form-check-label">{{ Medicament.medNomcommercial }}</label><br><br>
