@@ -15,7 +15,7 @@
         <input class="form-control" name="prix" type="number">
 
         <label>Famille</label>
-        <select name="codefamille">
+        <select class="form-select" name="codefamille">
             <option value="">--choose value--</option>
             {% for famille in famille  %}
                 <option value="{{ famille.famCode }}">{{ famille.famLibelle }}</option>
