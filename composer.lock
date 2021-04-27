@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd7edd434f505c951c1dfd52dd9a795d",
+    "content-hash": "051718765704af9e6c5d55b2784c1515",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1461,6 +1461,48 @@
                 }
             ],
             "time": "2021-03-07T14:33:28+00:00"
+        },
+        {
+            "name": "fpdf/fpdf",
+            "version": "1.83.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/coreydoughty/Fpdf.git",
+                "reference": "9a27abfd0a8e72ef690e94f3d5efc862541a3ff2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/coreydoughty/Fpdf/zipball/9a27abfd0a8e72ef690e94f3d5efc862541a3ff2",
+                "reference": "9a27abfd0a8e72ef690e94f3d5efc862541a3ff2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fpdf\\": "src/Fpdf"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Corey Doughty",
+                    "email": "corey@doughty.ca"
+                }
+            ],
+            "description": "FPDF Composer Wrapper",
+            "homepage": "https://github.com/coreydoughty/Fpdf",
+            "keywords": [
+                "fpdf",
+                "pdf",
+                "wrapper"
+            ],
+            "time": "2021-04-25T18:41:04+00:00"
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
@@ -8177,5 +8219,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }

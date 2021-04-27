@@ -6,45 +6,45 @@
     <h1><div><span class="soulign">Prescription</span></div></h1>
 </head>
 <div class="container">
-    <form name="prescrire" method="post">
+    <form name="prescrire" method="post" action={{ path("prescription") }}>
 
         <label>Sélectionnez un médicament : </label>
             <select name="medoc">
                 <option value="">-- Please choose an option --</option>
-                <option value="Cod">Codéine</option>
-                <option value="Para">Paracétamole</option>
-                <option value="Morph">Morphine</option>
-                <option value="Cort">Cortisol</option>
+                {% for Medicament in Medicament  %}
+                    <option value="{{ Medicament.medDepotlegal }}%}">{{ Medicament.medNomcommercial }}</option>
+                {% endfor %}
             </select>
-            <br><br>
-            <textarea name="msg-medoc" typeof="text" rows="6" cols="40">Vous pouvez saisir ici</textarea>
 
         <br><br>
 
             <label>Sélectionner un individu :</label>
             <select name="ind">
-
+                <option value=""></option>
+                {% for tin in tin  %}
+                    <option value="{{ tin.tinCode }}%}">{{ tin.tinLibelle }}</option>
+                {% endfor %}
             </select>
-            <br><br>
-            <textarea name="msg-ind" typeof="text" rows="6" cols="40">Vous pouvez saisir ici</textarea>
 
         <br><br>
 
             <label>Sélectionner un dosage :</label>
             <select name="dos">
                 <option value="">-- Please choose an option --</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+                {% for dosage in dosage  %}
+                    <option value="{{ dosage.dosCode }}%}">{{ dosage.dosQuantite }}</option>
+                {% endfor %}
             </select>
-            <br><br>
-            <textarea name="msg-dos" typeof="text" rows="6" cols="40">Vous pouvez saisir ici</textarea>
-        <br>
 
+        <br><br>
 
-            <input type="submit" value="Envoyer" />
-            <input type="reset" value="Annuler" />
+            <label>Indication du dosage et de la fréquence de prise d'un médicament :</label><br>
+            <textarea name="poso" typeof="text" rows="9" cols="60"></textarea>
+        <br><br>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('addMedoc') }}"/>
+            <input type="submit" name="envoi" value="Envoyer" />
+            <input type="reset" name="annul" value="Annuler" />
     </form>
 </div>
 {% endblock %}
