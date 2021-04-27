@@ -15,32 +15,51 @@ class Contreindic
     /**
      * @var int
      *
-     * @ORM\Column(name="idList", type="integer", nullable=false)
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idlist;
+    private $id;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="idContreIndic", type="integer", nullable=false)
+     * @ORM\Column(name="idList", type="integer", nullable=false)
      */
-    private $idcontreindic;
+    private $idlist;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="libelleMed", type="string", length=255, nullable=false)
+     */
+    private $libellemed;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
     public function getIdlist(): ?int
     {
         return $this->idlist;
     }
 
-    public function getIdcontreindic(): ?int
+    public function setIdlist(int $idlist): self
     {
-        return $this->idcontreindic;
+        $this->idlist = $idlist;
+
+        return $this;
     }
 
-    public function setIdcontreindic(int $idcontreindic): self
+    public function getLibellemed(): ?string
     {
-        $this->idcontreindic = $idcontreindic;
+        return $this->libellemed;
+    }
+
+    public function setLibellemed(string $libellemed): self
+    {
+        $this->libellemed = $libellemed;
 
         return $this;
     }

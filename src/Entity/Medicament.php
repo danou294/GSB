@@ -15,7 +15,7 @@ class Medicament
     /**
      * @var int
      *
-     * @ORM\Column(name="$medDepotlegal", type="integer", nullable=false)
+     * @ORM\Column(name="medDepotlegal", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
