@@ -22,10 +22,9 @@
         <tbody>
         {% for med in medicaments %}
         <tr>
-            <td align="center">{{ med.idMedicament }}</td>
             <td align="center">{{ med.medNomcommercial }}</td>
-            <td align="center">{{ med.medPrixechantillon }}</td>
-            <td align="center"><a href={{ path('modifier_medicament', {id: med.medDepotlegal}) }}><button type="button" >modifier </button> </a></td>
+            <td align="center">{{ med.medPrixechantillon }} &euro</td>
+          <!--  <td align="center"><a href={{ path('modifier_medicament', {id: med.medDepotlegal}) }}><button type="button" >modifier </button> </a></td> -->
         </tr>
         {% endfor %}
         </tbody>

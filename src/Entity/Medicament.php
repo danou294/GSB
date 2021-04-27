@@ -21,16 +21,9 @@ class Medicament
     /**
      * @var int
      *
-     * @ORM\Column(name="id_medicament", type="integer", nullable=false)
+     * @ORM\Column(name="$medDepotlegal", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idMedicament;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="med_depotlegal", type="integer", nullable=false)
      */
     private $medDepotlegal;
 
@@ -89,21 +82,9 @@ class Medicament
     private $imageFile;
 
 
-    public function getIdMedicament(): ?int
-    {
-        return $this->idMedicament;
-    }
-
     public function getMedDepotlegal(): ?int
     {
         return $this->medDepotlegal;
-    }
-
-    public function setMedDepotlegal(int $medDepotlegal): self
-    {
-        $this->medDepotlegal = $medDepotlegal;
-
-        return $this;
     }
 
     public function getMedNomcommercial(): ?string

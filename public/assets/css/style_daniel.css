@@ -156,3 +156,41 @@ input{
     color: #003f82;
     font-size: 1.5em;
 }
+
+.boutonAjout{
+    display: flex;
+    width: 2em;
+    height: 2em;
+    border-radius: 93px;
+    border: solid 3px #003f82;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    font-size: 5.5em;
+    transition: 0.5s;
+}
+
+.boutonAjout:hover{
+    display: flex;
+    width: 2em;
+    height: 2em;
+    border-radius: 93px;
+    border: solid 3px #ffffff;
+    background-color: #003f82;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 5.5em;
+}
+
+.boutonAjout > a{
+    text-decoration:none;
+    color:#003f82;
+    transition: 0.5s;
+}
+
+
+.boutonAjout  a:hover{
+    text-decoration:none;
+    color:white;
+}

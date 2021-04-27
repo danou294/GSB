@@ -25,7 +25,6 @@ class ajoutMedicament extends AbstractController
         $token = $request->request->get('_csrf_token');
         if ($request->isMethod('POST') && $this->isCsrfTokenValid('addMedoc', $token)) {
             $medicament = new Medicament();
-            $medicament->setMedDepotlegal($request->request->get('Depot_legal'));
             $medicament->setMedNomcommercial($request->request->get('nom_commercial'));
             $medicament->setMedPrixechantillon($request->request->get('prix'));
             $medicament->setMedComposition($request->request->get('composition'));
