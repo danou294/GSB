@@ -31,16 +31,19 @@
         <input class="form-control" name="effet" type="text">
 
         <label>Composition</label>
-        <input class="form-control" name="composition" type="text">
+        <input class="form-control" name="composition" type="text"><br>
 
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('addMedoc') }}"/>
 
-        <button class="btn btn-primary" type="submit">Button</button>
-
 
         {% for Medicament in Medicament  %}
-            <input type="checkbox" name="contreIndic[]" value="{{ Medicament.medNomcommercial }}">{{ Medicament.medNomcommercial }}
+            <input class="form-check-input" id="{{ Medicament.meddepotlegal }}" type="checkbox" name="contreIndic[]" value="{{ Medicament.medNomcommercial }}"><label for="{{ Medicament.meddepotlegal }}" class="form-check-label">{{ Medicament.medNomcommercial }}</label><br><br>
         {% endfor %}
+
+        <button class="btn btn-primary" type="submit">Soumettre</button>
+
+
+
     </form>
 
 </div>
