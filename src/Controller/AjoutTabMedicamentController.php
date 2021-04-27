@@ -14,7 +14,7 @@ class AjoutTabMedicamentController extends AbstractController
 
 
     /**
-     * @Route("/ajout/tab/maladie", name="ajout_tab_medicament")
+     * @Route("/ajout/tab/medicament", name="ajout_tab_medicament")
 
      * @return Response
      */

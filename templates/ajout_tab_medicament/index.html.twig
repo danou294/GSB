@@ -7,29 +7,25 @@
 
 
 <h1><div><span class="soulign">P</span></div></h1>
-    <h1><div><span class="soulign">Voici le tableau contenant le code et les noms de maladies</span></div></h1>
+    <h1><div><span class="soulign">Voici le tableau contenant le code et les noms des médicaments</span></div></h1>
 
-
-    <form action="{{ path('ajout_client') }}" method="post">
-        <label>?????Ajout client????</label>
-        <input name="type_individu" type="text"/>
-        <button type="submit" name="button" value="insert"  class="bouton">Ajouter</button>
-    </form>
 
     <table>
         <thead>
          <tr>
-            <th>Code maladie</th>
-            <th>Nom maladie</th>
-                <th scope="col">Numéro</th>
+            <th>Code medicament</th>
+            <th>Nom medicament</th>
+             <th>Prix du médicament</th>
+                <th scope="col">Options</th>
         </tr>
         </thead>
         <tbody>
         {% for med in medicaments %}
         <tr>
-            <td></td>
-               <td>{{ med.medNomcommercial }}</td>
-               <td><a href={{ path('modifier_medicament', {id: med.medDepotlegal}) }}><button type="button" >modifier </button> </a></td>
+            <td align="center">{{ med.idMedicament }}</td>
+            <td align="center">{{ med.medNomcommercial }}</td>
+            <td align="center">{{ med.medPrixechantillon }}</td>
+            <td align="center"><a href={{ path('modifier_medicament', {id: med.medDepotlegal}) }}><button type="button" >modifier </button> </a></td>
         </tr>
         {% endfor %}
         </tbody>

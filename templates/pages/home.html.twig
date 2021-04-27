@@ -7,13 +7,13 @@
     <div class="liste">
         {% for Medicament in Medicament  %}
         <div class="medicament">
+            <img src="{{ asset('assets/image/image.svg') }}">
             <div>{{Medicament.medNomcommercial}}</div>
             <div>{{Medicament.medDepotlegal}}</div>
             <div>{{Medicament.medPrixechantillon}}</div>
         </div>
-    </div>
         {% endfor %}
-    <h2><span class="soulign">Médicaments non conseillé</span></h2>
+    </div>
     <a href="/ajoutMedicament">ajouteeeeerrr</a>
     </div>
 
