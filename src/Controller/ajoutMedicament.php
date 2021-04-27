@@ -69,7 +69,7 @@ class ajoutMedicament extends AbstractController
                 $i=$i+1;
             }
 
-          //  return $this->redirectToRoute('home');
+           return $this->redirectToRoute('home');
         }
 
 
