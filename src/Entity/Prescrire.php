@@ -14,10 +14,8 @@ class Prescrire
 {
     /**
      * @var int
-     *
-     * @ORM\Column(name="med_depotlegal", type="integer", nullable=false, options={"unsigned"=true})
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\Column(name="med_depotlegal", type="integer", nullable=false, options={"unsigned"=true})
      */
     private $medDepotlegal;
 
@@ -25,8 +23,6 @@ class Prescrire
      * @var int
      *
      * @ORM\Column(name="tin_code", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
      */
     private $tinCode;
 
@@ -34,8 +30,6 @@ class Prescrire
      * @var int
      *
      * @ORM\Column(name="dos_code", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
      */
     private $dosCode;
 
@@ -69,6 +63,27 @@ class Prescrire
     public function setPrePosologie(string $prePosologie): self
     {
         $this->prePosologie = $prePosologie;
+
+        return $this;
+    }
+
+    public function setMedDepotlegal(int $medDepotlegal): self
+    {
+        $this->medDepotlegal = $medDepotlegal;
+
+        return $this;
+    }
+
+    public function setTinCode(int $tinCode): self
+    {
+        $this->tinCode = $tinCode;
+
+        return $this;
+    }
+
+    public function setDosCode(int $dosCode): self
+    {
+        $this->dosCode = $dosCode;
 
         return $this;
     }
