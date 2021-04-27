@@ -7,6 +7,7 @@ use ContainerCDEsyw9\getDoctrine_Orm_DefaultEntityManager_PropertyInfoExtractorS
 use App\Entity\Medicament;
 use App\Repository\MedicamentRepository;
 use ContainerCDEsyw9\getDoctrine_CacheClearMetadataCommandService;
+use Doctrine\Persistence\ObjectManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,6 +18,16 @@ use Twig\Environment;
 
 class ajoutMedicament extends AbstractController
 {
+    /**
+     * @var $MedicamentRepository
+     */
+    private $Repository;
+
+    public function __construct(MedicamentRepository $Repository){
+        $this->repository = $Repository;
+    }
+
+
     /**
      * @Route("/ajoutMedicament", name="ajout_medicament")
      */
@@ -47,5 +58,30 @@ class ajoutMedicament extends AbstractController
         ]);
     }
 
+
+
+
+
+    /**
+     * @route("admin/{id}", name="admin.medicament.edit")
+     * @param Medicament $medicament
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     */
+    public function edit(Medicament $medicament, Request $request)
+    {
+        $form = $this->createForm(MedicamentType::class, $medicament);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid() ){
+            $em = $this->getDoctrine()->getManager();
+            $em->flush();
+            return $this->redirectToRoute('home');
+        }
+
+
+        return $this->render('/modifier_medicament/index.html.twig',[
+            'medicament' =>  $medicament,
+        'form' => $form->createView()
+            ]);
+    }
 
 }

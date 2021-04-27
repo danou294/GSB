@@ -20,7 +20,6 @@ class MedicamentRepository extends ServiceEntityRepository
         parent::__construct($registry, Medicament::class);
     }
 
-
     // /**
 
     //  * @return Maladies[] Returns an array of Maladies objects
