@@ -15,7 +15,6 @@ class TypeIndividuType extends AbstractType
     {
         $builder
             ->add('tinLibelle', TextType::class,['label'=>'Nom'] )
-            ->add('save',SubmitType::class,['label'=>'Créer un type'])
         ;
     }
 
