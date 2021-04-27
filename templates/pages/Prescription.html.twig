@@ -12,7 +12,7 @@
             <select class="form-select" aria-label="Default select example" name="medoc">
                 <option value="">-- Please choose an option --</option>
                 {% for Medicament in Medicament  %}
-                    <option value="{{ Medicament.medDepotlegal }}%}">{{ Medicament.medNomcommercial }}</option>
+                    <option value="{{ Medicament.medDepotlegal }}">{{ Medicament.medNomcommercial }}</option>
                 {% endfor %}
             </select>
 
@@ -22,7 +22,7 @@
             <select class="form-select" aria-label="Default select example" name="ind">
                 <option value=""></option>
                 {% for tin in tin  %}
-                    <option value="{{ tin.tinCode }}%}">{{ tin.tinLibelle }}</option>
+                    <option value="{{ tin.tinCode }}">{{ tin.tinLibelle }}</option>
                 {% endfor %}
             </select>
 
@@ -32,7 +32,7 @@
             <select class="form-select" aria-label="Default select example" name="dos">
                 <option value="">-- Please choose an option --</option>
                 {% for dosage in dosage  %}
-                    <option value="{{ dosage.dosCode }}%}">{{ dosage.dosQuantite }}</option>
+                    <option value="{{ dosage.dosCode }}">{{ dosage.dosQuantite }}</option>
                 {% endfor %}
             </select>
 

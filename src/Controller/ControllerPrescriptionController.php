@@ -31,7 +31,6 @@ class ControllerPrescriptionController extends AbstractController
         $tin = $repoTin->findAll();
         if ($request->isMethod('POST') && $this->isCsrfTokenValid('addMedoc', $token)) {
             $prescrire = new Prescrire();
-            $prescrire->setMedDepotlegal($request->request->get('medoc'));
             $prescrire->setTinCode($request->request->get('ind'));
             $prescrire->setDosCode($request->request->get('dos'));
             $prescrire->setPrePosologie($request->request->get('poso'));
@@ -41,7 +40,7 @@ class ControllerPrescriptionController extends AbstractController
             $em->persist($prescrire);
             $em->flush();
 
-            return $this->redirectToRoute('pdf');
+           // return $this->redirectToRoute('pdf');
         }
 
         return $this->render('pages/Prescription.html.twig', [
