@@ -26,7 +26,24 @@ class HomeController extends AbstractController
     public function index(MedicamentRepository $repoMedicament):Response
     {
         $reponse = $repoMedicament->findAll();
-        return $this->render('pages/home.html.twig', ['Medicament' => $reponse]);
+        foreach ($reponse as $value){
+            $indice=$value->getIndice();
+            if ($indice<30){
+                $libelle[$value->getMeddepotlegal()]='Peu dangereux';
+                $class[$value->getMeddepotlegal()]='indiceV';
+            }
+            elseif ($indice<80){
+                $libelle[$value->getMeddepotlegal()]='Normal';
+                $class[$value->getMeddepotlegal()]='indiceO';
+            }
+            else{
+                $libelle[$value->getMeddepotlegal()]='Tres dangereux';
+                $class[$value->getMeddepotlegal()]='indiceR';
+            }
+        }
+        return $this->render('pages/home.html.twig', ['Medicament' => $reponse,
+            'libelle'=>$libelle,
+            'class'=>$class]);
         }
 
 }

@@ -70,6 +70,12 @@ class Medicament
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="integer")
+
+     */
+    private $indice = 50;
+
     public function getMeddepotlegal(): ?int
     {
         return $this->meddepotlegal;
@@ -155,6 +161,22 @@ class Medicament
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getIndice(): ?int
+    {
+        return $this->indice;
+    }
+
+    public function setIndice(int $indice): self
+    {
+        if ($indice==0)
+        {
+            $indice=$this->indice;
+        }
+        $this->indice = $indice;
 
         return $this;
     }

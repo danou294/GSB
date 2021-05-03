@@ -40,15 +40,21 @@ class ajoutMedicament extends AbstractController
         $token = $request->request->get('_csrf_token');
         $medicament = $medicamentRepository->findAll();
         $famille = $repoFamille->findAll();
+
         if ($request->isMethod('POST') && $this->isCsrfTokenValid('addMedoc', $token)) {
             $medicament = new Medicament();
             $medicament->setMedNomcommercial($request->request->get('nom_commercial'));
             $medicament->setMedPrixechantillon($request->request->get('prix'));
             $medicament->setMedComposition($request->request->get('composition'));
-
             $medicament->setMedEffets($request->request->get('effet'));
             $medicament->setFamCode($request->request->get('codefamille'));
             $medicament->setImage('NULL');
+            if ($request->request->get('indice')!=null)
+            {
+                $medicament->setIndice($request->request->get('indice'));
+            }
+
+
 
             // ORM
             $em = $this->getDoctrine()->getManager();
