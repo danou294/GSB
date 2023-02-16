@@ -41,9 +41,7 @@ class HomeController extends AbstractController
                 $class[$value->getMeddepotlegal()]='indiceR';
             }
         }
-        return $this->render('pages/home.html.twig', ['Medicament' => $reponse,
-            'libelle'=>$libelle,
-            'class'=>$class]);
+        return $this->render('pages/home.html.twig', ['Medicament' => $reponse]);
         }
 
 }

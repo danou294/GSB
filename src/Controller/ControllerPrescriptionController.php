@@ -32,7 +32,7 @@ class ControllerPrescriptionController extends AbstractController
         if ($request->isMethod('POST') && $this->isCsrfTokenValid('addMedoc', $token)) {
             $prescrire = new Prescrire();
             $prescrire->setTinCode($request->request->get('ind'));
-            $prescrire->setDosCode($request->request->get('dos'));
+            $prescrire->setDosCode(0);
             $prescrire->setPrePosologie($request->request->get('poso'));
 
             // ORM

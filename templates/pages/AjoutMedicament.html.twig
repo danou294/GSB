@@ -16,7 +16,7 @@
 
         <label>Famille</label>
         <select class="form-select" name="codefamille">
-            <option value="">--choose value--</option>
+            <option value=0>--choose value--</option>
             {% for famille in famille  %}
                 <option value="{{ famille.famCode }}">{{ famille.famLibelle }}</option>
             {% endfor %}
